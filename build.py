@@ -10,13 +10,13 @@ def icon(name):
 
 # (label, sublabel, url, icon html, brand color)
 SOCIAL = [
-    ("YouTube", "@JBEvaboot", "https://www.youtube.com/@JBEvaboot", icon("youtube"), "#FF0000"),
+    ("YouTube", "@JBEvaboot · 7.1K subscribers", "https://www.youtube.com/@JBEvaboot", icon("youtube"), "#FF0000"),
     ("X", "@jb_jezequel", "https://x.com/jb_jezequel", icon("x"), "var(--ink)"),
     ("LinkedIn", "JB Jézéquel", "https://www.linkedin.com/in/jb-fullvision/", icon("linkedin"), "#0A66C2"),
     ("Instagram", "@jbjezequel", "https://www.instagram.com/jbjezequel/", icon("instagram"), "#E4405F"),
     ("TikTok", "@jb_jezequel", "https://www.tiktok.com/@jb_jezequel", icon("tiktok"), "var(--ink)"),
     ("Facebook", "JB Jézéquel", "https://www.facebook.com/profile.php?id=61586221183698", icon("facebook"), "#0866FF"),
-    ("Substack", "jbjezequel.com", "https://www.jbjezequel.com/", icon("substack"), "#FF6719"),
+    ("Substack", "jbjezequel.com · 1.6K subscribers", "https://www.jbjezequel.com/", icon("substack"), "#FF6719"),
 ]
 COMPANIES = [
     ("Evaboot", "Export LinkedIn Sales Navigator leads", "https://evaboot.com/", '<img src="assets/evaboot.svg" alt="">', None),
