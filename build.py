@@ -26,7 +26,8 @@ HIDE = set()  # links waiting for a confirmed handle
 
 def row(label, sub, url, ico, color):
     style = f' style="--brand:{color}"' if color else ""
-    return f'''      <a class="link" href="{url}" target="_blank" rel="noopener"{style}>
+    key = label.lower()  # the Links tab on GTM Social only counts known keys (social/web/links_store.py LINKS)
+    return f'''      <a class="link" href="{url}" target="_blank" rel="noopener" data-link="{key}"{style}>
         <span class="ico">{ico}</span>
         <span class="txt"><span class="label">{label}</span><span class="sub">{sub}</span></span>
         <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>

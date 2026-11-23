@@ -61,5 +61,24 @@
 {{SOCIAL}}
 {{COMPANIES}}
   </main>
+<script>
+/* Visit and click counts for the Links tab on GTM Social. No cookie, no id: one beacon per visit and per click. */
+(function () {
+  var END = "https://social.evaboot.com/links/click";
+  var src = new URLSearchParams(location.search).get("s") || document.referrer || "";
+  function send(data) {
+    data.src = src;
+    var body = JSON.stringify(data);
+    if (!(navigator.sendBeacon && navigator.sendBeacon(END, body))) {
+      fetch(END, { method: "POST", body: body, mode: "no-cors", keepalive: true }).catch(function () {});
+    }
+  }
+  send({ e: "view" });
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest && ev.target.closest("a[data-link]");
+    if (a) send({ e: "click", link: a.getAttribute("data-link") });
+  });
+})();
+</script>
 </body>
 </html>
