@@ -25,6 +25,9 @@
               border:3px solid var(--card); box-shadow:0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.08); }
     h1 { font-size:24px; font-weight:700; letter-spacing:-.02em; }
     header p { color:var(--muted); font-size:15px; margin-top:6px; line-height:1.5; }
+    .roles span { display:block; }
+    .roles a { color:var(--ink); font-weight:600; text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px; }
+    .roles a:hover { text-decoration-color:var(--ink); }
     section { margin-bottom:28px; }
     h2 { font-size:13px; font-weight:600; color:var(--muted); margin:0 4px 10px; }
     .link { display:flex; align-items:center; gap:14px; padding:14px 16px; margin-bottom:10px; background:var(--card);
@@ -50,7 +53,10 @@
     <header>
       <img class="avatar" src="assets/jb.jpg" alt="JB Jézéquel" width="104" height="104">
       <h1>JB Jézéquel</h1>
-      <p>Co-founder of Evaboot and FullVision.</p>
+      <p class="roles">
+        <span>Co-founder @ <a href="https://evaboot.com/" target="_blank" rel="noopener">Evaboot</a> ($2M ARR)</span>
+        <span>Co-Founder &amp; CEO @ <a href="https://fullvision.io/" target="_blank" rel="noopener">FullVision</a></span>
+      </p>
     </header>
 {{SOCIAL}}
 {{COMPANIES}}
