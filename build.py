@@ -11,15 +11,17 @@ def icon(name):
 # (label, sublabel, url, icon html, brand color)
 SOCIAL = [
     ("YouTube", "@JBEvaboot", "https://www.youtube.com/@JBEvaboot", icon("youtube"), "#FF0000"),
-    ("Instagram", "@jbjezequel", "https://www.instagram.com/jbjezequel/", icon("instagram"), "#E4405F"),
-    ("TikTok", "@TIKTOK_HANDLE", "https://www.tiktok.com/@TIKTOK_HANDLE", icon("tiktok"), "var(--ink)"),
     ("LinkedIn", "JB Jézéquel", "https://www.linkedin.com/in/jb-jezequel-evaboot", icon("linkedin"), "#0A66C2"),
+    ("Instagram", "@jbjezequel", "https://www.instagram.com/jbjezequel/", icon("instagram"), "#E4405F"),
+    ("TikTok", "@jb_jezequel", "https://www.tiktok.com/@jb_jezequel", icon("tiktok"), "var(--ink)"),
+    ("Facebook", "JB Jézéquel", "https://www.facebook.com/jbjezequel", icon("facebook"), "#0866FF"),
+    ("Substack", "jbjezequel.com", "https://www.jbjezequel.com/", icon("substack"), "#FF6719"),
 ]
 COMPANIES = [
     ("Evaboot", "Export LinkedIn Sales Navigator leads", "https://evaboot.com/", '<img src="assets/evaboot.svg" alt="">', None),
-    ("FullVision", "Revenue attribution for B2B SaaS", "https://fullvision.io/", '<img src="assets/fullvision.png" alt="">', None),
+    ("FullVision", "AI agents that grow your website and revenue.", "https://fullvision.io/", '<img src="assets/fullvision.png" alt="">', None),
 ]
-HIDE = {"TikTok", "Instagram"}  # links waiting for a confirmed handle
+HIDE = set()  # links waiting for a confirmed handle
 
 def row(label, sub, url, ico, color):
     style = f' style="--brand:{color}"' if color else ""
@@ -34,6 +36,6 @@ def section(title, items):
     return f'    <section>\n      <h2>{title}</h2>\n{rows}\n    </section>'
 
 html = (ROOT / "template.html").read_text()
-html = html.replace("{{SOCIAL}}", section("Follow", SOCIAL)).replace("{{COMPANIES}}", section("Build with me", COMPANIES))
+html = html.replace("{{SOCIAL}}", section("Follow", SOCIAL)).replace("{{COMPANIES}}", section("My companies", COMPANIES))
 (ROOT / "index.html").write_text(html)
 print("index.html written")
