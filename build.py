@@ -12,7 +12,7 @@ def icon(name):
 SOCIAL = [
     ("YouTube", "@JBEvaboot", "https://www.youtube.com/@JBEvaboot", icon("youtube"), "#FF0000"),
     ("X", "@jb_jezequel", "https://x.com/jb_jezequel", icon("x"), "var(--ink)"),
-    ("LinkedIn", "JB Jézéquel", "https://www.linkedin.com/in/jb-jezequel-evaboot", icon("linkedin"), "#0A66C2"),
+    ("LinkedIn", "JB Jézéquel", "https://www.linkedin.com/in/jb-fullvision/", icon("linkedin"), "#0A66C2"),
     ("Instagram", "@jbjezequel", "https://www.instagram.com/jbjezequel/", icon("instagram"), "#E4405F"),
     ("TikTok", "@jb_jezequel", "https://www.tiktok.com/@jb_jezequel", icon("tiktok"), "var(--ink)"),
     ("Facebook", "JB Jézéquel", "https://www.facebook.com/profile.php?id=61586221183698", icon("facebook"), "#0866FF"),
